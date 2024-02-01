@@ -1,0 +1,59 @@
+@import '../../../app/styles/common';
+
+.Wrap {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: fit-content;
+
+    .Label {
+        width: 42px;
+        height: 22px;
+        display: flex;
+        align-items: center;
+        border-radius: 24px;
+        overflow: hidden;
+        cursor: pointer;
+
+        .Input {
+            display: none;
+
+            &:checked + .Checkmark {
+                background-color: $accent;
+
+                &:before {
+                    left: 23px;
+                }
+            }
+        }
+    }
+
+    .Checkmark {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background-color: $pale-lavender-blue;
+        padding: 3px;
+        transition: all 0.2s ease-in-out;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 3px;
+            transform: translateY(-50%);
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: $white;
+            transition: all 0.2s ease-in-out;
+            box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.15);
+        }
+    }
+
+    .Title {
+        font-weight: 500;
+        margin-left: 10px;
+    }
+}
+

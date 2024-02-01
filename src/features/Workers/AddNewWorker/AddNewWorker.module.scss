@@ -1,0 +1,39 @@
+
+.Content {
+    position: relative;
+    float: right;
+    padding: 120px 64px;
+    overflow: auto;
+    height: 100%;
+    border-radius: 20px 0 0 20px;
+    background: #FFF;
+    max-width: 535px;
+    width: 100%;
+
+    .Title {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    .Error {
+        margin-bottom: 20px;
+        font-size: 18px;
+        font-weight: 500;
+        color: red;
+    }
+
+    .Button {
+        margin-top: 32px;
+        width: 100%;
+        height: 54px;
+    }
+
+
+    .Caption {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 500;
+    }
+
+}

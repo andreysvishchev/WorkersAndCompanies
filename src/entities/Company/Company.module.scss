@@ -1,0 +1,47 @@
+@import '../../app/styles/common';
+
+.Wrap {
+    margin-bottom: 10px;
+    padding: 15px 10px;
+    transition: $transition;
+    border-radius: 20px;
+    background-color: $accent-light;
+
+    &.Active {
+        background-color: $white;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    .Head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    .Title {
+
+        font-size: 18px;
+        font-weight: 600;
+        transition: $transition;
+    }
+
+    .Quantity {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .Address {
+        font-size: 16px;
+        transition: $transition;
+    }
+
+    .Col {
+        cursor: pointer;
+        margin-bottom: 10px;
+    }
+}
+

@@ -1,0 +1,100 @@
+@import '../../../app/styles/common';
+
+
+.Wrap {
+    position: relative;
+    border-radius: 14px;
+    background-color: $pale-lavender-blue;
+    cursor: pointer;
+    transition: $transition;
+    margin-bottom: 16px;
+
+    &:hover {
+        border-color: rgba(54, 56, 70, 0.4);
+
+        .CurrentValue {
+            svg {
+                path {
+                    stroke-opacity: 0.5;
+                }
+            }
+        }
+    }
+
+    &.Open {
+        border-color: rgba(54, 56, 70, 0.6);
+        .CurrentValue {
+            svg {
+                path {
+                    stroke-opacity: 0.5;
+                }
+            }
+        }
+    }
+}
+
+.Inner {
+    width: 100%;
+}
+
+.CurrentValue {
+    width: 100%;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5;
+    color: $text;
+    padding: 16px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    svg {
+        opacity: 1;
+        width: 10px;
+        height: 6px;
+
+        path {
+            transition: $transition;
+            stroke: #363846;
+        }
+    }
+}
+
+.Options {
+    width: 100%;
+    position: absolute;
+    top: 62px;
+    left: 0;
+    opacity: 0;
+    border-radius: 14px;
+    background-color: $pale-lavender-blue;
+    box-shadow: 0px 12px 20px 0px rgba(54, 56, 70, 0.08);
+    padding: 10px;
+    pointer-events: none;
+    visibility: hidden;
+    z-index: 5;
+
+    &.Open {
+        opacity: 1;
+        pointer-events: auto;
+        visibility: visible;
+    }
+}
+
+.Option {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: normal;
+    padding: 7px 12px;
+    border-radius: 6px;
+    transition: $transition;
+
+    &:hover {
+        background: rgba(54, 56, 70, 0.1);
+    }
+
+    &.Active {
+        background: rgba(54, 56, 70, 0.1);
+    }
+}

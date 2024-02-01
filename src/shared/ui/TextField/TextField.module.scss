@@ -1,0 +1,41 @@
+@import '../../../app/styles/common';
+
+.Wrap {
+    display: block;
+    position: relative;
+    margin-bottom: 16px;
+
+    .Input {
+        width: 100%;
+        padding: 15px 22px;
+        border-radius: 14px;
+        background-color: $pale-lavender-blue;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.5;
+        color: $text;
+        border: 1px solid $pale-lavender-blue;
+        transition: $transition;
+
+        &::placeholder {
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 1.5;
+            color: $text;
+        }
+
+        @media (hover: hover) {
+            &:hover {
+                border: 1px solid #E2E2EE;
+            }
+        }
+    }
+
+    .Caption {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 500;
+    }
+}

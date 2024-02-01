@@ -1,0 +1,46 @@
+{
+  "companies": [
+    {
+      "name": "Uber",
+      "selected": false,
+      "address": "Washington 220 53748 1ST West Row, WS 01236-1527",
+      "quantity": 219,
+      "id": "uber_5"
+    },
+    {
+      "name": "IKEA",
+      "selected": false,
+      "quantity": 110,
+      "address": "Suite 750 56718 Fadel Trail, South Kittie, MA 01836-4527",
+      "id": "ikea_01"
+    },
+    {
+      "name": "Meta",
+      "selected": false,
+      "quantity": 98,
+      "address": "3243 Darby Lodge, West Chery, AZ 50090",
+      "id": "meta_4"
+    },
+    {
+      "name": "Macdonalds",
+      "selected": false,
+      "quantity": 339,
+      "address": "512 Streich Summit, Lockmantown, IL 69909-0689",
+      "id": "macdonalds_6"
+    },
+    {
+      "name": "Amazon",
+      "selected": false,
+      "quantity": 78,
+      "address": "393 Filomena Overpass, Littleport, CA 69818",
+      "id": "amazon_3"
+    },
+    {
+      "name": "Google",
+      "selected": false,
+      "quantity": 320,
+      "address": "4111 Wintheiser Valley, Wiegandmouth, MS 88538",
+      "id": "google_02"
+    }
+  ]
+}

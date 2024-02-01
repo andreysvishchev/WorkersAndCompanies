@@ -1,0 +1,46 @@
+@import '../../app/styles/common';
+
+.Wrap {
+    padding: 20px 10px;
+    background-color: #61B4CF;
+    overflow: auto;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    .Head {
+        margin-bottom: 30px;
+    }
+
+    .Row {
+        background-color: #fff;
+        padding: 15px 10px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 15px;
+    }
+
+    .Caption {
+        font-size: 24px;
+        line-height: 1.2;
+        font-weight: 600;
+        color: #022633;
+    }
+
+    .Remove {
+        transition: $transition;
+        font-weight: 500;
+        cursor: pointer;
+
+        @media (hover: hover) {
+            &:hover {
+                color: #086b8d;
+            }
+        }
+    }
+}
+

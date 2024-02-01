@@ -1,0 +1,51 @@
+@import '../../app/styles/common';
+
+.Wrap {
+    display: grid;
+    grid-template-columns:80px 1fr 1fr 2fr 100px 60px;
+    gap: 20px;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid $accent-light;
+    border-radius: 10px;
+    transition: $transition;
+
+    &.Active {
+        background-color: $accent-light;
+    }
+
+    .Index {
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    .Name {
+        cursor: pointer;
+        font-size: 18px;
+        line-height: 1;
+        font-weight: 500;
+    }
+
+    .Company {
+        font-weight: 500;
+    }
+
+    .Input {
+        input {
+            padding: 0 10px;
+        }
+    }
+
+    .Remove {
+        cursor: pointer;
+        transition: $transition;
+        font-weight: 500;
+
+        @media (hover: hover) {
+            &:hover {
+                color: $accent;
+            }
+        }
+    }
+}
+

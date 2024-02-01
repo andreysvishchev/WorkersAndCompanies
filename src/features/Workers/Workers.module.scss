@@ -1,0 +1,37 @@
+@import '../../app/styles/common';
+
+.Wrap {
+    padding: 20px;
+    overflow: auto;
+
+    .Row {
+        background-color: $accent-light;
+        padding: 15px 20px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .Block {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+    }
+
+    .Button {
+        margin-right: 20px;
+    }
+
+    .Checkbox {
+        margin-right: 20px;
+    }
+
+    .Caption {
+        font-size: 20px;
+        line-height: 1.2;
+        font-weight: 600;
+        color: #022633;
+    }
+}
+
