@@ -8,26 +8,27 @@ import { hideAllWorkers, showAllWorkers } from "../Workers/workersSlice.ts"
 import Button from "../../shared/ui/Button/Button.tsx"
 import { openModal } from "../../shared/ui/Modal/modalSlice.ts"
 import AddNewCompany from "./AddNewCompany/AddNewCompany.tsx"
+import { useCallback } from "react"
 
 const Companies = () => {
     const items = useAppSelector(getCompanies)
     const allSelected = useAppSelector(getActiveAllStatus)
     const dispatch = useAppDispatch()
 
-    const toggleAllCompaniesHandler = () => {
+    const toggleAllCompaniesHandler = useCallback(() => {
         dispatch(toggleAllCompanies(!allSelected))
         if (!allSelected) dispatch(showAllWorkers())
         else dispatch(hideAllWorkers())
-    }
+    }, [allSelected])
 
-    const openModalHandler = () => {
+    const openModalHandler = useCallback(() => {
         dispatch(openModal("new-company"))
-    }
+    }, [])
 
-    const removeSelected = () => {
+    const removeSelected = useCallback(() => {
         dispatch(removeSelectedCompany())
         dispatch(hideAllWorkers())
-    }
+    }, [])
 
     return (
         <div className={cn(classes.Wrap)}>

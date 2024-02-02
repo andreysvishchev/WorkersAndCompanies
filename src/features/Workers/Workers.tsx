@@ -2,7 +2,7 @@ import classes from "./Workers.module.scss"
 import { useAppDispatch, useAppSelector } from "../../shared/hooks/reduxHooks.ts"
 import { getActiveAllStatus, getMoreWorkers, getPagination, getWorkers, removerSelectedWorkers, toggleAllWorkers } from "./workersSlice.ts"
 import Worker from "../../entities/Worker/Worker.tsx"
-import { useEffect, useRef } from "react"
+import { useCallback, useEffect, useRef } from "react"
 import Button from "../../shared/ui/Button/Button.tsx"
 import Checkbox from "../../shared/ui/Checkbox/Checkbox.tsx"
 import AddNewWorker from "./AddNewWorker/AddNewWorker.tsx"
@@ -16,18 +16,18 @@ const Workers = () => {
     const allSelected = useAppSelector(getActiveAllStatus)
     const dispatch = useAppDispatch()
 
-    const openModalHandler = () => {
+    const openModalHandler = useCallback(() => {
         dispatch(openModal("new-worker"))
-    }
+    }, [])
 
-    const toggleAllWorkersHandler = () => {
+    const toggleAllWorkersHandler = useCallback(() => {
         dispatch(toggleAllWorkers(!allSelected))
-    }
+    }, [allSelected])
 
-    const removeAllWorkersHandler = () => {
+    const removeAllWorkersHandler = useCallback(() => {
         if (allSelected) dispatch(removeAllWorkers())
         dispatch(removerSelectedWorkers())
-    }
+    }, [allSelected])
 
     useEffect(() => {
         if (!pagination.items.length) return
